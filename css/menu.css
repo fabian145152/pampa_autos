@@ -1,0 +1,31 @@
+    /* Este archivo es para menu del welcome.php*/
+    
+    h1 {
+        color: #0488bc;
+    }
+    /* con container y btn action iconos uno al lado del otro y texto abajo */
+    
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-action {
+        /*  centra los iconos   */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        background: #cfe6ef;
+        padding: 20px;
+        margin-top: 20px;
+        color: #8488bc;
+        cursor: pointer;
+        /*supuestamente cambia el punetro del mouse */
+        border-radius: 10%;
+    }
+    
+    .a.hoover {
+        text-decoration: none;
+    }

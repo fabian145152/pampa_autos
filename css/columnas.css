@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#columna1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    margin-top: 10px;
+
+}
+
+#columna2 {
+    margin-left: 220px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+}
+
+#columna3 {
+    margin-left: 550px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+body {
+    margin: 0px 50px;
+}

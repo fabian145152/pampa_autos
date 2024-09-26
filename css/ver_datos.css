@@ -1,0 +1,21 @@
+#deposito {
+    background-color: #f0b7b8;
+    font-size: 23px;
+}
+
+#credito {
+    background-color: #FBff03;
+    font-size: 23px;
+}
+
+#columnas {
+    column-count: 5;
+    column-gap: 20px;
+    column-rule: 4px dotted gray;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr auto;
+    grid-gap: 10px;
+}

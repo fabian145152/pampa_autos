@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    background-color: #e5e5e5;
+    font-family: arial, sans-serif;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 30%;
+    border: 10px solid #ccc;
+    font-size: 18px;
+}
+
+#myTable th,
+#myTable td {
+    text-align: left;
+    padding: 2px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+table {
+    width: 90%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+.boton {
+    padding: 4px 25px;
+    background: rgb(19, 143, 247);
+    border: 1px solid #1161B0;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.sorete {
+    padding: 4px 25px;
+    background: rgb(243, 30, 101);
+    border: 1px solid #1161B0;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.vista {
+    padding: 4px 25px;
+    background: rgb(19, 143, 247);
+    border: 1px solid #1161B0;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}

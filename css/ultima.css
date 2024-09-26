@@ -1,0 +1,21 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+#Power-Contenedor {
+    text-align: center;
+}
+
+#Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}

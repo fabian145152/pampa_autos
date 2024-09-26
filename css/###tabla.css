@@ -1,0 +1,14 @@
+html {
+    padding: 1em;
+}
+
+body {
+    padding: 30px;
+    border: 1px solid #4CAF50;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}

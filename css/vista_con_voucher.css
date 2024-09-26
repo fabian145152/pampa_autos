@@ -1,0 +1,70 @@
+body {
+    margin: 10px;
+    border: 1px solid #4CAF50;
+    padding: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#contenedor>div {
+    width: 50%;
+}
+
+
+/* Reset de márgenes y padding */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilo del contenedor principal */
+
+.containeraa {
+    display: flex;
+    justify-content: space-between;
+    /* Espacio entre las columnas */
+    padding: 10px;
+}
+
+
+/* Estilo de las columnas */
+
+.column {
+    width: 48%;
+    /* Ancho de las columnas */
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+
+/* Estilo específico para la columna izquierda */
+
+.left-column {
+    background-color: #d9e8fc;
+}
+
+
+/* Estilo específico para la columna derecha */
+
+.right-column {
+    background-color: #fcd9d9;
+}
+
+#miInput {
+    color: blue;
+    /* Cambia el color del texto */
+    background-color: lightyellow;
+    /* Cambia el color de fondo */
+    border: 2px solid green;
+    /* Cambia el color del borde */
+}

@@ -1,0 +1,21 @@
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+body {
+    background-color: #eaeaea;
+}
+
+form {
+    max-width: 600px;
+    width: 100%;
+    padding: 15px 35px 45px 35px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: 'Lato', sans-serif;
+    margin: 20px auto;
+}
