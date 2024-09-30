@@ -76,7 +76,6 @@ $row = $result->fetch_assoc();
             clear: both;
         }
 
-        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
 
             .col-25,
@@ -103,27 +102,12 @@ $row = $result->fetch_assoc();
                     <input type="hidden" id="id" name="id" value="<?php echo $row['id'] ?>">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">UNIDAD</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="numero" name="numero" value="<?php echo $row['numero'] ?>">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">MARCA</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="marca" name="marca" value="<?php echo $row['marca'] ?>">
-                </div>
-            </div>
+
             <div class="row">
                 <div class="col-25">
                     <label for="lname">MODELO</label>
                 </div>
-                <div class="col-75">
+                <div class="col-25">
                     <input type="text" id="modelo" name="modelo" value="<?php echo $row['modelo'] ?>">
                 </div>
             </div>
@@ -131,229 +115,75 @@ $row = $result->fetch_assoc();
                 <div class="col-25">
                     <label for="lname">DOMINIO</label>
                 </div>
-                <div class="col-75">
+                <div class="col-25">
                     <input type="text" id="dominio" name="dominio" value="<?php echo $row['dominio'] ?>">
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col-25">
-                    <label for="lname">FECHA DE VENCIMIENTO DE LA PATENTE</label>
+                    <label for="lname">TITULO</label>
                 </div>
-                <div class="col-75">
-                    <input type="date" id="dominio_fecha" name="dominio_fecha" value="<?php echo $row['dominio_fecha'] ?>">
+                <div class="col-25">
+
+                    <select id="titulo" name="titulo">
+                        <option value="<?php echo $row['titulo'] ?>"><?php echo $row['titulo'] ?></option>
+                        <option value="si">SI</option>
+                        <option value="no">NO</option>
+
+                    </select>
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col-25">
-                    <label for="lname">IMAGEN DEL RECIBO DE PATENTE</label>
+                    <label for="lname">CEDULA VERDE</label>
                 </div>
                 <div class="col-25">
-                    <input type="text" id="dominio_f" name="dominio_f" value="<?php echo $row['dominio_f'] ?>">
-                </div>
-                <div class="col-30">
-                    <a href="">CAMBIA PDF</a>
+
+                    <select id="cedula_verde" name="cedula_verde">
+                        <option value="<?php echo $row['cedula_verde'] ?>"><?php echo $row['cedula_verde'] ?></option>
+                        <option value="si">SI</option>
+                        <option value="no">NO</option>
+
+                    </select>
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col-25">
-                    <label for="lname">COLOR</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="color" name="color" value="<?php echo $row['color'] ?>">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">AÑO</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="año" name="año" value="<?php echo $row['año'] ?>">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">FOTO AUTO VISTA FRENTE</label>
+                    <label for="lname">GAS VENCIMIENTO</label>
                 </div>
                 <div class="col-25">
-                    <input type="text" id="foto_1" name="foto_1" value="<?php echo $row['foto_1'] ?>">
-                </div>
-                <div class="col-30">
-                    <a href="">CAMBIA IMAGEN</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">FOTO AUTO VISTA TRASERA</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="foto_2" name="foto_2" value="<?php echo $row['foto_2'] ?>">
-                </div>
-                <div class="col-30">
-                    <a href="">CAMBIA IMAGEN</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">TITULO DEL AUTO FRENTE</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="titulo_f" name="titulo_f" value="<?php echo $row['titulo_f'] ?>">
-                </div>
-                <div class="col-30">
-                    <a href="">CAMBIA PDF</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">TITULO DEL AUTO dorso</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="titulo_d" name="titulo_d" value="<?php echo $row['titulo_d'] ?>">
-                </div>
-                <div class="col-30">
-                    <a href="">CAMBIA PDF</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">LICENCIA TAXI FRENTE</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="licencia_f" name="licencia_f" value="<?php echo $row['licencia_f'] ?>">
-                </div>
-                <div class="col-50">
-                    <a href="">CAMBIA PDF</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">LICENCIA TAXI DORSO</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="licencia_d" name="licencia_d" value="<?php echo $row['licencia_d'] ?>">
-                </div>
-                <div class="col-50">
-                    <a href="">CAMBIA PDF</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">FECHA DE VENCIMIENTO DE LA LICENCIA</label>
-                </div>
-                <div class="col-75">
-                    <input type="date" id="licencia_vto" name="licencia_vto" value="<?php echo $row['licencia_vto'] ?>">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">SEGURO</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="seguro_f" name="seguro_f" value="<?php echo $row['seguro_f'] ?>">
-                </div>
-                <div class="col-50">
-                    <a href="">CAMBIA PDF</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">SEGURO VENCIMIENTO</label>
-                </div>
-                <div class="col-75">
-                    <input type="date" id="seguro_vto" name="seguro_vto" value="<?php echo $row['seguro_vto'] ?>">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">VTV</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="vtv_f" name="vtv_f" value="<?php echo $row['vtv_f'] ?>">
-                </div>
-                <div class="col-50">
-                    <a href="">CAMBIA PDF</a>
+                    <input type="date" id="gas_vto" name="gas_vto" value="<?php echo $row['gas_vto'] ?>">
                 </div>
             </div>
             <div class="row">
                 <div class="col-25">
                     <label for="lname">VTV VENCIMIENTO</label>
                 </div>
-                <div class="col-75">
+                <div class="col-25">
                     <input type="date" id="vtv_vto" name="vtv_vto" value="<?php echo $row['vtv_vto'] ?>">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">RENOVAVION DE LA VTV</label>
-                </div>
-                <div class="col-75">
-                    <input type="date" id="vtv_renueva" name="vtv_renueva" value="<?php echo $row['vtv_renueva'] ?>">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">GAS FRENTE</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="gas_f" name="gas_f" value="<?php echo $row['gas_f'] ?>">
-                </div>
-                <div class="col-50">
-                    <a href="">CAMBIA PDF</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">GAS DORSO</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="gas_d" name="gas_d" value="<?php echo $row['gas_d'] ?>">
-                </div>
-                <div class="col-50">
-                    <a href="">CAMBIA PDF</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">GAS VENCIMIENTO</label>
-                </div>
-                <div class="col-75">
-                    <input type="date" id="gas_vto" name="gas_vto" value="<?php echo $row['gas_vto'] ?>">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">HABILITACION FRENTE</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="hab_f" name="hab_f" value="<?php echo $row['hab_f'] ?>">
-                </div>
-                <div class="col-50">
-                    <a href="">CAMBIA PDF</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">HABILITACION DORSO</label>
-                </div>
-                <div class="col-25">
-                    <input type="text" id="hab_d" name="hab_d" value="<?php echo $row['hab_d'] ?>">
-                </div>
-                <div class="col-50">
-                    <a href="">CAMBIA PDF</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-25">
                     <label for="lname">HABILITACION VENCIMIENTO</label>
                 </div>
-                <div class="col-75">
+                <div class="col-25">
                     <input type="date" id="hab_vto" name="hab_vto" value="<?php echo $row['hab_vto'] ?>">
                 </div>
             </div>
 
 
             <br>
-            <input type="submit" value="Submit">
+            <div class="col-25">
+
+                <input type="submit" value="GUARDAR" style="text-align: center;">
+            </div>
     </div>
     </form>
     </div>

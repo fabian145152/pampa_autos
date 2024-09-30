@@ -62,7 +62,7 @@ function head()
 <?php
 }
 
-function aviso10DiasAntes($fecha)
+function a_10_DiasAntes($fecha)
 {
     // Fecha actual
     $hoy = new DateTime();
@@ -84,6 +84,31 @@ function aviso10DiasAntes($fecha)
         */
     if ($hoy >= $fechaAviso && $hoy >= $fechaObjetivo) {
         echo "<p style='color: red;'><strong>Ojo...$fecha</strong><br></p>";
-        echo "Aviso: se paso la fecha objetivo.";
+    }
+}
+
+
+function a_30_DiasAntes($fecha)
+{
+    // Fecha actual
+    $hoy = new DateTime();
+
+    // Crear un objeto DateTime a partir de la fecha proporcionada
+    $fechaObjetivo = new DateTime($fecha);
+
+    // Restar 10 días a la fecha objetivo
+    $fechaAviso = clone $fechaObjetivo;
+    $fechaAviso->modify('-30 days');
+
+    // Comparar la fecha de aviso con la fecha actual
+    if ($hoy >= $fechaAviso && $hoy <= $fechaObjetivo) {
+        echo "<p style='color: red;'><strong>Ojo...$fecha</strong></p>";
+        //echo "Aviso: Faltan 10 días o menos para la fecha objetivo ($fecha).";
+    } /*else {
+        echo "No hay aviso, aún faltan más de 10 días o ya ha pasado la fecha objetivo.";
+    }
+        */
+    if ($hoy >= $fechaAviso && $hoy >= $fechaObjetivo) {
+        echo "<p style='color: red;'><strong>Ojo...$fecha</strong><br></p>";
     }
 }

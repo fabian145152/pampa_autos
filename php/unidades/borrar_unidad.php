@@ -5,8 +5,9 @@ $con->set_charset("utf8mb4");
 echo $id = $_GET['q'];
 
 
+
 $sql = "DELETE FROM autos WHERE id=" . $id;
 
 $result = $con->query($sql);
 
-header("Location:../../index.php");
+header("Location:lista_autos.php");
