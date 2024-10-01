@@ -27,9 +27,9 @@ include_once "funciones/funciones.php";
                 <label class="sr-only" for="inlineFormInput">Elija</label>
                 <select name="opcion" id="opcion" class="form-control mb-2" ?utf8mb4?>
                     <option value="">SELECCIONE</option>
-                    <option value="opcion1">Administrador</option>
-                    <option value="opcion2">Usuario editor</option>
-                    <option value="opcion3">Solo lectura</option>
+              
+                    <option value="edita">Usuario editor</option>
+                    <option value="solo_lee">Solo lectura</option>
                 </select>
             </div>
             &nbsp;&nbsp;
@@ -39,7 +39,7 @@ include_once "funciones/funciones.php";
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="password" class="form-control" name="password" id="password" placeholder="pasword" required>
+                    <input type="password" class="form-control" name="pass" id="pass" placeholder="pass" required>
                 </div>
             </div>
             &nbsp;&nbsp;

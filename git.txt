@@ -1,0 +1,94 @@
+
+	video 
+	https://www.youtube.com/watch?v=VdGzPZ31ts8
+
+git es sistema de control de versiones
+1 instalar git
+2 abrir git bush here en la carpeta de trabajo
+	
+	git version    #veo la version
+	git config --global user.name "Fabian Nogueroles"
+	git config --global user.email laboratorio.fabian@gmail.com  # sin comillas
+	git config --global core.editor "code --wait"                # es para usar VSC y esperar a qie lo abra
+	git config --global -e				             # abre vsc y si esta todo bien 
+								     muestra la configuracion
+								     Luego lo cierro
+	git config --global core.auto crlf true			     # si es windows
+	git config --global core.auto crlf INPUT		     # si es linux o mac
+
+		con esto esta configurado git en nuestra pc
+
+	git config -h				# help
+	
+	ls			# lista todas las carpetas y archivos
+	pwd			# me indica el directorio donde estoy
+	cd nombre_carpeta	# me cambia a esa carpeta
+	cd primer letra de la carpeta + tab, me completa el nombre 
+	cd.. 			# voy a la carpeta enterior
+	mkdir nueva_carpeta	# crea carpeta 
+
+	git init	# inicializa el repositorio local, tambien crea una carpeta oculta que se llama .git
+	git -a .git	# me lista lo que tiene la carpeta, que son todos los archicos de mi repo y todos los commit
+	code . 		# me abre el IDE
+	git status	# me indica los commit echos
+	git add     # selecciona los archivos a seguir
+	git add git.txt		# solo ese archivos
+	git add .txt		# todos los txt
+	git add . 			# todos los archivos
+	
+					git add
+	git add arch_1 arch_2 etc 	# si tengo que agregar + de 1 archivo nombres separados por un " "
+				si modifico el archivo y hago git status
+				me lista en rojo los archivos modificados.
+				hago git add git.txt y me stagea el archivo nuevamante
+
+					Borrar un archivo
+	git commit -m "nombre del commit"	
+				rm nombre del archivo  	# borra el archivo
+				git status				# muestra lo que hice
+				git status -s 			# muestra todo pero con menos argumentos
+				git commit -m "borre archivo"	# lo commitea
+				git restore archivo_2.txt     #lo recupera
+
+				renombrar un archivo
+	mv archivo1 archivo_2		3 me renombre el archivo
+
+para no subir al servidor un archivo determinado
+		crear archivo .gitignore
+		y agregar en el mismo
+			.nombre del archivo
+			/nombre de la carpeta
+			y no hace el add 
+
+	git diff    # me muestra las modificaciones que le hice a los archivos antes de tageralos
+							para salir de esa pantalla q
+	git diff --staged  		# me muestra los cambios de los archivos tageados
+	git log 	            # me muestra todos los cambios con los datos de quien los hizo	
+	git log --oneline		# me mustra todos con el numero y el nombre
+
+		RAMAS branch
+
+	git branch					# verifico la rama en la que estoy
+										main es la principal
+	git checkout -b rama_nueva	cambio a esa rama	
+	cat nombre del archivo			# me musestra los cambios en el archivo
+
+	git checkout main 			# cambio a la rama principal																
+
+	git merge otra_rama # trae los cambios de la otra rama a esta (la nueva) 
+	git checkout rama		# cambio de una rama a la otra
+	git merge otra_rama 	# traigo todo de la otra rama
+
+			## Cambiar de un commit a otro
+	git log --oneline							** me lista todos los commit con nombre
+												con q salgo
+	git checkout <numero de commit>				**me cambia a ese				
+
+	
+despues de crear el repo en github me da una lista de comandos
+copio la linea que dice 
+git remote add origin https://github.com/fabian145152/eee.git
+en git
+luego hago 
+git push -u origin main	3 y sube todo a el repo remoto
+

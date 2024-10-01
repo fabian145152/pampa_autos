@@ -58,7 +58,7 @@ function head()
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootbox.min.js"></script>
-
+    <a href="../css/main.css"></a>
 <?php
 }
 

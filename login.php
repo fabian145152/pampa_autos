@@ -6,18 +6,22 @@ $con->set_charset("utf8mb4");
 
 // Obtener la opción seleccionada
 $opcionSeleccionada = $_POST['opcion'];
+echo $pass = $_POST['pass'];
+
+
+
+
+
 
 // Verificar la opción seleccionada y mostrar un mensaje
 switch ($opcionSeleccionada) {
-    case 'opcion1':
-        echo "Has seleccionado la Opción 1.";
-        break;
-    case 'opcion2':
+    case 'edita':
+
         header("Location: php/unidades/lista_autos.php");
         //echo "Has seleccionado la Opción 2.";
         break;
-    case 'opcion3':
-        echo "Has seleccionado la Opción 3.";
+    case 'solo_lee':
+        header("Location: php/unidades/ver_autos.php");
         break;
     default:
         echo "No has seleccionado una opción válida.";

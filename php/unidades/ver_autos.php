@@ -51,8 +51,7 @@ $diaDelAño = date('z', $timestamp) + 1; // +1 porque 'z' empieza desde 0
     <h3>FECHAS DE VENCIMINETOS</h3>
     <table class="table table-bordered table-sm table-hover">
         <thead class="thead-dark">
-            <a href="nueva_unidad.php" class="btn btn-success">NUEVA UNIDAD</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
             <a href="../../index.php" class="btn btn-danger">SALIR</a>
 
             <tr>
@@ -64,8 +63,7 @@ $diaDelAño = date('z', $timestamp) + 1; // +1 porque 'z' empieza desde 0
                 <th>GNC</th>
                 <th>VTV</th>
                 <th>Habilitación</th>
-                <th></th>
-                <th></th>
+
 
             </tr>
         </thead>
@@ -173,9 +171,6 @@ $diaDelAño = date('z', $timestamp) + 1; // +1 porque 'z' empieza desde 0
                     ?>
                 </td>
 
-
-                <td><a class="btn btn-success" href="#" onclick="updateProduct(<?php echo $row['id']; ?>)">Editar</td>
-                <td><a class="btn btn-danger" href="#" onclick="deleteProduct(<?php echo $row['id']; ?>)">Eliminar</td>
             </tbody>
         <?php
         }
