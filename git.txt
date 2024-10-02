@@ -6,6 +6,8 @@ git es sistema de control de versiones
 1 instalar git
 2 abrir git bush here en la carpeta de trabajo
 	
+	git remote -v me dice en que repositorio estoy
+
 	git version    #veo la version
 	git config --global user.name "Fabian Nogueroles"
 	git config --global user.email laboratorio.fabian@gmail.com  # sin comillas

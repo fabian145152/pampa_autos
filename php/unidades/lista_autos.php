@@ -77,21 +77,13 @@ $diaDelAño = date('z', $timestamp) + 1; // +1 porque 'z' empieza desde 0
 
                 <td><?php echo $row['modelo'] ?></td>
                 <td><?php echo $row['dominio'] ?></td>
-                <td><?php $titulo = $row['titulo'];
-                    if ($titulo == "si") {
-                        echo "SI";
-                    } else {
-                        echo "NO";
-                    }
+                <td><?php $titulo = $row['titulo_f'];
                     ?>
+                    <a href="<?php echo $titulo ?>"><?php echo $titulo ?></a>
                 </td>
-                <td><?php $cedula_verde = $row['cedula_verde'];
-                    if ($cedula_verde == "si") {
-                        echo "SI";
-                    } else {
-                        echo "NO";
-                    }
+                <td><?php $cedula = $row['cedula_f'];
                     ?>
+                    <a href="<?php echo $cedula ?>"><?php echo $cedula ?></a>
                 </td>
 
                 <td><?php echo "Vto: " . $fecha_1 = $row['gas_vto'];
@@ -174,7 +166,7 @@ $diaDelAño = date('z', $timestamp) + 1; // +1 porque 'z' empieza desde 0
                 </td>
 
 
-                <td><a class="btn btn-success" href="#" onclick="updateProduct(<?php echo $row['id']; ?>)">Editar</td>
+                <!--                <td><a class="btn btn-success" href="#" onclick="updateProduct(<?php echo $row['id']; ?>)">Editar</td> -->
                 <td><a class="btn btn-danger" href="#" onclick="deleteProduct(<?php echo $row['id']; ?>)">Eliminar</td>
             </tbody>
         <?php

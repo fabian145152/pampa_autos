@@ -16,76 +16,7 @@ $row = $result->fetch_assoc();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDITAR UNIDAD</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        input[type=text],
-        input[type=date],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            resize: vertical;
-        }
-
-        label {
-            padding: 12px 12px 12px 0;
-            display: inline-block;
-        }
-
-        input[type=submit] {
-            background-color: #04AA6D;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            float: right;
-        }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        .container {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-
-        .col-25 {
-            float: left;
-            width: 25%;
-            margin-top: 6px;
-        }
-
-        .col-75 {
-            float: left;
-            width: 75%;
-            margin-top: 6px;
-        }
-
-        /* Clear floats after the columns */
-        .row::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        @media screen and (max-width: 600px) {
-
-            .col-25,
-            .col-75,
-            input[type=submit] {
-                width: 100%;
-                margin-top: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../css/a_styles.css">
 </head>
 
 <body>
@@ -125,14 +56,13 @@ $row = $result->fetch_assoc();
                 <div class="col-25">
                     <label for="lname">TITULO</label>
                 </div>
-                <div class="col-25">
+                <div class="col-25 recuadro">
+                    <label for="fileInput" class="file-label">titulo_f_patente.jpg                       
+                        <input type="file" id="titulo_f" name="titulo_f" accept=".jpg,.jpeg" class="form-control" size="30">
+                        <input type="file" id="titulo_d" name="titulo_d" accept=".jpg,.jpeg" class="form-control" size="30">
+                    </label>
 
-                    <select id="titulo" name="titulo">
-                        <option value="<?php echo $row['titulo'] ?>"><?php echo $row['titulo'] ?></option>
-                        <option value="si">SI</option>
-                        <option value="no">NO</option>
 
-                    </select>
                 </div>
             </div>
 

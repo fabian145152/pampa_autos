@@ -2,15 +2,16 @@
 include_once "../../funciones/funciones.php";
 $con = conexion();
 $con->set_charset("utf8mb4");
+
 echo $id = $_POST['id'];
-
-
 echo "<br>";
 echo $modelo = $_POST['modelo'];
 echo "<br>";
 echo $dominio = $_POST['dominio'];
 echo "<br>";
-echo $titulo = $_POST['titulo'];
+echo $titulo_f = $_POST['titulo_f'];
+echo "<br>";
+echo $titulo_d = $_POST['titulo_d'];
 echo "<br>";
 echo $cedula_verde = $_POST['cedula_verde'];
 echo "<br>";
@@ -20,15 +21,17 @@ echo $gas_vto = $_POST['gas_vto'];
 echo "<br>";
 echo $hab_vto = $_POST['hab_vto'];
 echo "<br>";
-
 //exit;
+
+
+
+include_once "../includes/foto_titulo.php";
 
 $sql = "UPDATE autos SET                                     
                         modelo='$modelo',
                         dominio='$dominio',        
-                        titulo='$titulo',                      
-                        cedula_verde='$cedula_verde',
-                        licencia_vto='$licencia_vto',                                         
+                        titulo_f='$titulo_f',                                                                                      
+                        titulo_d='$titulo_d',                                                                                      
                         vtv_vto='$vtv_vto',                                        
                         gas_vto='$gas_vto',                        
                         hab_vto='$hab_vto'
@@ -45,5 +48,5 @@ if ($con->query($sql) === TRUE) {
 } else {
     echo "Error al actualizar: " . $con->error;
 }
-
+exit;
 header('Location:lista_autos.php');
